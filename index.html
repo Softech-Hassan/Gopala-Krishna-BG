@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive web layout with sidebar and top navigation.">
+  <title>My Web App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="My Web App home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>My Web App</span>
+    </a>
+    <label class="search-box">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="Search sections..." aria-label="Search sections">
+      <button id="clearSearch" class="clear-search" type="button" aria-label="Clear search" hidden>×</button>
+    </label>
+    <button class="profile-button" type="button" aria-label="User profile">●</button>
+  </header>
+
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="sidebar-heading">NAVIGATION</div>
+      <nav id="sideNav" class="side-nav"></nav>
+      <div class="sidebar-footer">Choose a section to view its content.</div>
+    </aside>
+
+    <main class="main-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">WORKSPACE</p>
+          <h1 id="pageTitle">Section A</h1>
+        </div>
+        <span id="resultCount" class="result-count">3 sections</span>
+      </div>
+
+      <nav id="topTabs" class="top-tabs" aria-label="Section tabs"></nav>
+      <div id="contentList" class="content-list" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">⌕</span>
+        <h2>No matching sections</h2>
+        <p>Try another search term or clear your search.</p>
+        <button id="resetSearch" class="secondary-button" type="button">Clear search</button>
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">My Web App <span>•</span> Responsive navigation demo</footer>
+</body>
+</html>
